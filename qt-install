@@ -58,7 +58,6 @@ a1_install_non_minimal_os
 # this is in progress
 # qt-install-dns-resolver
 
-qt-setup-firewall
 
 qt-install-repoforge
 
@@ -69,5 +68,16 @@ qt-mysql-secure-vpopmail
 # setup web server
 chkconfig httpd on
 service httpd start
+
+# Setup mysql server
+chkconfig mysqld on
+service httpd start
+
+# setup dovecot
+chkconfig dovecot on
+service dovecot start
+
+# start firewall last
+qt-setup-firewall
 
 exit 0
